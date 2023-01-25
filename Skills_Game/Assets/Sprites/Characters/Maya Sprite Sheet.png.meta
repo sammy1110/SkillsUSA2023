@@ -1,0 +1,624 @@
+fileFormatVersion: 2
+guid: ce533639428767e4a87d3f726822fc1e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1265392510660971659
+    second: Maya Sprite Sheet_0
+  - first:
+      213: 345968183715172849
+    second: Maya Sprite Sheet_1
+  - first:
+      213: -8289788288420246894
+    second: Maya Sprite Sheet_2
+  - first:
+      213: 1024494725426900235
+    second: Maya Sprite Sheet_3
+  - first:
+      213: 5127339522709059926
+    second: Maya Sprite Sheet_4
+  - first:
+      213: 7074207568564507068
+    second: Maya Sprite Sheet_5
+  - first:
+      213: 3691850159691608189
+    second: Maya Sprite Sheet_6
+  - first:
+      213: -2995568797546096520
+    second: Maya Sprite Sheet_7
+  - first:
+      213: 2238167064712455579
+    second: Maya Sprite Sheet_8
+  - first:
+      213: -1463279919974645690
+    second: Maya Sprite Sheet_9
+  - first:
+      213: -4358738881070472121
+    second: Maya Sprite Sheet_10
+  - first:
+      213: 2544791269039578273
+    second: Maya Sprite Sheet_11
+  - first:
+      213: 4403298514089616451
+    second: Maya Sprite Sheet_12
+  - first:
+      213: -6737032440186933250
+    second: Maya Sprite Sheet_13
+  - first:
+      213: -83346700748222005
+    second: Maya Sprite Sheet_14
+  - first:
+      213: -703354957738041762
+    second: Maya Sprite Sheet_15
+  - first:
+      213: 6631580862245308642
+    second: Maya Sprite Sheet_16
+  - first:
+      213: 7283695178681622966
+    second: Maya Sprite Sheet_17
+  - first:
+      213: -560524402745469788
+    second: Maya Sprite Sheet_18
+  - first:
+      213: -2732624773312131585
+    second: Maya Sprite Sheet_19
+  - first:
+      213: -7916368371357949428
+    second: Maya Sprite Sheet_20
+  - first:
+      213: 108249757424758020
+    second: Maya Sprite Sheet_21
+  - first:
+      213: -2550177501539673254
+    second: Maya Sprite Sheet_22
+  - first:
+      213: -7591754744835205934
+    second: Maya Sprite Sheet_23
+  - first:
+      213: -1979143990920815268
+    second: Maya Sprite Sheet_24
+  - first:
+      213: 9160606112620241511
+    second: Maya Sprite Sheet_25
+  - first:
+      213: -3085998457466965675
+    second: Maya Sprite Sheet_26
+  - first:
+      213: 7606966392958825919
+    second: Maya Sprite Sheet_27
+  - first:
+      213: -5341135648121050934
+    second: Maya Sprite Sheet_28
+  - first:
+      213: 1739417174577437230
+    second: Maya Sprite Sheet_29
+  - first:
+      213: 2500121272215363982
+    second: Maya Sprite Sheet_30
+  - first:
+      213: 5241792483349907637
+    second: Maya Sprite Sheet_31
+  - first:
+      213: -148413371396648585
+    second: Maya Sprite Sheet_32
+  - first:
+      213: -8720808072812763917
+    second: Maya Sprite Sheet_33
+  - first:
+      213: 1880031963691377655
+    second: Maya Sprite Sheet_34
+  - first:
+      213: 3098358614793644742
+    second: Maya Sprite Sheet_35
+  - first:
+      213: 5754308685094001094
+    second: Maya Sprite Sheet_36
+  - first:
+      213: -9090962448124086593
+    second: Maya Sprite Sheet_37
+  - first:
+      213: -5066252154114138390
+    second: Maya Sprite Sheet_38
+  - first:
+      213: 3275503468736108213
+    second: Maya Sprite Sheet_39
+  - first:
+      213: 8757952838772718842
+    second: Maya Sprite Sheet_40
+  - first:
+      213: -6132604690484777457
+    second: Maya Sprite Sheet_41
+  - first:
+      213: 2391500166234128607
+    second: Maya Sprite Sheet_42
+  - first:
+      213: 3662304250326103525
+    second: Maya Sprite Sheet_43
+  - first:
+      213: 5636546991855144839
+    second: Maya Sprite Sheet_44
+  - first:
+      213: 2416905767283869649
+    second: Maya Sprite Sheet_45
+  - first:
+      213: 8641643118263179724
+    second: Maya Sprite Sheet_46
+  - first:
+      213: -7050326417088250172
+    second: Maya Sprite Sheet_47
+  - first:
+      213: 1947429973433607132
+    second: Maya Sprite Sheet_48
+  - first:
+      213: -7196139389684510531
+    second: Maya Sprite Sheet_49
+  - first:
+      213: -7572862822951939854
+    second: Maya Sprite Sheet_50
+  - first:
+      213: -3446257906792559070
+    second: Maya Sprite Sheet_51
+  - first:
+      213: 8403812801266032658
+    second: Maya Sprite Sheet_52
+  - first:
+      213: -5424670199371365765
+    second: Maya Sprite Sheet_53
+  - first:
+      213: -7562645303539750742
+    second: Maya Sprite Sheet_54
+  - first:
+      213: 1669793173530438250
+    second: Maya Sprite Sheet_55
+  - first:
+      213: 7583784330532982197
+    second: Maya Sprite Sheet_56
+  - first:
+      213: -8190192126591079010
+    second: Maya Sprite Sheet_57
+  - first:
+      213: -8501043528233438238
+    second: Maya Sprite Sheet_58
+  - first:
+      213: -5742516347203070704
+    second: Maya Sprite Sheet_59
+  - first:
+      213: 9169833911800454176
+    second: Maya Sprite Sheet_60
+  - first:
+      213: -6628702272602817694
+    second: Maya Sprite Sheet_61
+  - first:
+      213: 3631156854881799263
+    second: Maya Sprite Sheet_62
+  - first:
+      213: 6625877301092612589
+    second: Maya Sprite Sheet_63
+  - first:
+      213: -5503500436278349051
+    second: Maya Sprite Sheet_64
+  - first:
+      213: 8377955017466450679
+    second: Maya Sprite Sheet_65
+  - first:
+      213: -6318161304879986632
+    second: Maya Sprite Sheet_66
+  - first:
+      213: -1005493331397821950
+    second: Maya Sprite Sheet_67
+  - first:
+      213: -6888012990410778165
+    second: Maya Sprite Sheet_68
+  - first:
+      213: 3631200712307796368
+    second: Maya Sprite Sheet_69
+  - first:
+      213: 8392765645257670729
+    second: Maya Sprite Sheet_70
+  - first:
+      213: 4059733071027796225
+    second: Maya Sprite Sheet_71
+  - first:
+      213: -6484354416242441519
+    second: Maya Sprite Sheet_72
+  - first:
+      213: -4953107409523959160
+    second: Maya Sprite Sheet_73
+  - first:
+      213: 6253849911887116243
+    second: Maya Sprite Sheet_74
+  - first:
+      213: -6440024676242665404
+    second: Maya Sprite Sheet_75
+  - first:
+      213: 5625301832857298903
+    second: Maya Sprite Sheet_76
+  - first:
+      213: 6310096097840506733
+    second: Maya Sprite Sheet_77
+  - first:
+      213: -7449717051620943060
+    second: Maya Sprite Sheet_78
+  - first:
+      213: -8535723927372944645
+    second: Maya Sprite Sheet_79
+  - first:
+      213: -5507355057240848908
+    second: Maya Sprite Sheet_80
+  - first:
+      213: -5017543102802874515
+    second: Maya Sprite Sheet_81
+  - first:
+      213: 3997576819059333652
+    second: Maya Sprite Sheet_82
+  - first:
+      213: 446445122924289681
+    second: Maya Sprite Sheet_83
+  - first:
+      213: 2298540310015399958
+    second: Maya Sprite Sheet_84
+  - first:
+      213: -6200688329576155130
+    second: Maya Sprite Sheet_85
+  - first:
+      213: -7878284549617323174
+    second: Maya Sprite Sheet_86
+  - first:
+      213: 8959846806435348899
+    second: Maya Sprite Sheet_87
+  - first:
+      213: -6458587374463370343
+    second: Maya Sprite Sheet_88
+  - first:
+      213: 8760878404245832151
+    second: Maya Sprite Sheet_89
+  - first:
+      213: -3791548133553267856
+    second: Maya Sprite Sheet_90
+  - first:
+      213: -7642896043452044368
+    second: Maya Sprite Sheet_91
+  - first:
+      213: -796056170150652055
+    second: Maya Sprite Sheet_92
+  - first:
+      213: 3266528349076113800
+    second: Maya Sprite Sheet_93
+  - first:
+      213: -4916271900224511375
+    second: Maya Sprite Sheet_94
+  - first:
+      213: 629214806685242922
+    second: Maya Sprite Sheet_95
+  - first:
+      213: 9148356877600730086
+    second: Maya Sprite Sheet_96
+  - first:
+      213: 2793338370467698033
+    second: Maya Sprite Sheet_97
+  - first:
+      213: 1635561194425319883
+    second: Maya Sprite Sheet_98
+  - first:
+      213: 1254704395326038099
+    second: Maya Sprite Sheet_99
+  - first:
+      213: -4117914630496624331
+    second: Maya Sprite Sheet_100
+  - first:
+      213: 4496090903144098569
+    second: Maya Sprite Sheet_101
+  - first:
+      213: 7374896788040756552
+    second: Maya Sprite Sheet_102
+  - first:
+      213: 8977118880289997281
+    second: Maya Sprite Sheet_103
+  - first:
+      213: 1109466485553782075
+    second: Maya Sprite Sheet_104
+  - first:
+      213: -850796312163174841
+    second: Maya Sprite Sheet_105
+  - first:
+      213: -4725221093170324918
+    second: Maya Sprite Sheet_106
+  - first:
+      213: 8152876365054859803
+    second: Maya Sprite Sheet_107
+  - first:
+      213: -8403348180241660248
+    second: Maya Sprite Sheet_108
+  - first:
+      213: -541337698860166033
+    second: Maya Sprite Sheet_109
+  - first:
+      213: -5325266589425532774
+    second: Maya Sprite Sheet_110
+  - first:
+      213: 251425233796319954
+    second: Maya Sprite Sheet_111
+  - first:
+      213: 3585717216591835093
+    second: Maya Sprite Sheet_112
+  - first:
+      213: 1681182085500693154
+    second: Maya Sprite Sheet_113
+  - first:
+      213: -652978580214380988
+    second: Maya Sprite Sheet_114
+  - first:
+      213: -3690105801205156266
+    second: Maya Sprite Sheet_115
+  - first:
+      213: 1323225523712633265
+    second: Maya Sprite Sheet_116
+  - first:
+      213: -8098447645153592485
+    second: Maya Sprite Sheet_117
+  - first:
+      213: 6155508135325841683
+    second: Maya Sprite Sheet_118
+  - first:
+      213: 3008586412926091253
+    second: Maya Sprite Sheet_119
+  - first:
+      213: 322080147647583453
+    second: Maya Sprite Sheet_120
+  - first:
+      213: -130772049405724501
+    second: Maya Sprite Sheet_121
+  - first:
+      213: 1754936328328712888
+    second: Maya Sprite Sheet_122
+  - first:
+      213: 8216742292759399381
+    second: Maya Sprite Sheet_123
+  - first:
+      213: -4516765112186997866
+    second: Maya Sprite Sheet_124
+  - first:
+      213: 6518583282953490107
+    second: Maya Sprite Sheet_125
+  - first:
+      213: -4534901175348294655
+    second: Maya Sprite Sheet_126
+  - first:
+      213: 4045460373407446776
+    second: Maya Sprite Sheet_127
+  - first:
+      213: -6593046702903680922
+    second: Maya Sprite Sheet_128
+  - first:
+      213: -6986895497079287745
+    second: Maya Sprite Sheet_129
+  - first:
+      213: 641786239263671263
+    second: Maya Sprite Sheet_130
+  - first:
+      213: -2981168105125283181
+    second: Maya Sprite Sheet_131
+  - first:
+      213: -7086961311625235223
+    second: Maya Sprite Sheet_132
+  - first:
+      213: -8467980698875427184
+    second: Maya Sprite Sheet_133
+  - first:
+      213: -658092297146913028
+    second: Maya Sprite Sheet_134
+  - first:
+      213: -7381349511919452661
+    second: Maya Sprite Sheet_135
+  - first:
+      213: 5707764492694429844
+    second: Maya Sprite Sheet_136
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Maya Sprite Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 100
+        width: 36
+        height: 61
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573fc94473c607ee0800000000000000
+      internalID: -1265392510660971659
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maya Sprite Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 102
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f11ee5ea302dc400800000000000000
+      internalID: 345968183715172849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maya Sprite Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 102
+        width: 36
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29a848d0971c4fc80800000000000000
+      internalID: -8289788288420246894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maya Sprite Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 166
+        width: 36
+        height: 1
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0de457568cb73e00800000000000000
+      internalID: 1024494725426900235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Maya Sprite Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 281
+        y: 279
+        width: 93
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 659f4ed4128f72740800000000000000
+      internalID: 5127339522709059926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
