@@ -7,26 +7,17 @@ public class GrabController : MonoBehaviour
     public Transform grabDetect;
     public Transform boxHolder;
     public float rayDist;
+    public LayerMask Fwog;
+    public GameObject player;
 
 
     // Update is called once per frame
     void Update()
     {
-        RaycastHit2D grabCheck = Physics2D.Raycast(grabDetect.position, Vector2.right * transform.localScale, rayDist);
-
-        if(grabCheck.collider != null && grabCheck.collider.tag == "Frog")
+        if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position)< 1) 
         {
-            if(Input.GetKeyDown(KeyCode.E))
-            {
-                grabCheck.collider.gameObject.transform.parent = boxHolder;
-                grabCheck.collider.gameObject.transform.position = boxHolder.position;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
-            }
-            else
-            {
-                grabCheck.collider.gameObject.transform.parent = null;
-                grabCheck.collider.gameObject.GetComponent<Rigidbody2D>().isKinematic = false;
-            }
+            transform.parent = player.transform;
+            transform.localPosition = boxHolder.localPosition;
         }
     }
 }
