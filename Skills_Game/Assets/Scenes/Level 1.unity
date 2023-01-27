@@ -2641,6 +2641,7 @@ MonoBehaviour:
   player: {fileID: 2075086348}
   TimeBeforeNextScene: 0.5
   PlayerIsAtTheDoor: 0
+  sceneName: Inside House
 --- !u!212 &542656541
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4279,9 +4280,13 @@ EdgeCollider2D:
   - {x: -1.5179663, y: -1.2743212}
   - {x: -1.5126585, y: -1.4860876}
   - {x: -1.431797, y: -1.4928205}
-  - {x: -1.4464173, y: -2.30781}
+  - {x: -1.4335095, y: -2.5333784}
+  - {x: -0.40521345, y: -2.524659}
+  - {x: -0.32606953, y: -1.6582541}
+  - {x: 0.22956091, y: -1.6127015}
+  - {x: 0.3183745, y: -2.416262}
   - {x: 1.3382871, y: -2.322514}
-  - {x: 1.4339852, y: -2.3412232}
+  - {x: 1.472709, y: -2.5667918}
   - {x: 1.4512923, y: -1.4877826}
   - {x: 1.5255246, y: -1.4892552}
   - {x: 1.5224488, y: -1.2787412}
@@ -7189,8 +7194,8 @@ GameObject:
   - component: {fileID: 1757405636}
   - component: {fileID: 1757405639}
   - component: {fileID: 1757405638}
-  - component: {fileID: 1757405637}
   - component: {fileID: 1757405640}
+  - component: {fileID: 1757405637}
   m_Layer: 0
   m_Name: Grandma House Door
   m_TagString: Untagged
@@ -7221,12 +7226,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1757405635}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9f1f8386fb0877b4f9092bb75d8d38a7, type: 3}
+  m_Script: {fileID: 11500000, guid: efa4b044a08ca0945bf59b6feccffe93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 2075086348}
-  TimeBeforeNextScene: 0.5
+  TimeBeforeNextScene: 0
   PlayerIsAtTheDoor: 0
+  sceneName: Inside Grandma House
 --- !u!61 &1757405638
 BoxCollider2D:
   m_ObjectHideFlags: 0

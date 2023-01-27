@@ -42,8 +42,18 @@ public class Dialog : MonoBehaviour
     {
         foreach(char letter in dialogue[index].ToCharArray())
         {
-            dialogueText.text += letter;
-            yield return new WaitForSeconds(typingSpeed);
+            if(dialoguePanel.activeSelf)
+            {
+                dialogueText.text += letter;
+                yield return new WaitForSeconds(typingSpeed);
+            }
+            else
+            {
+                dialogueText.text = "";
+                index = 0;
+                dialoguePanel.SetActive(false);
+                break;
+            }
         }
     }
 
@@ -98,6 +108,7 @@ public class Dialog : MonoBehaviour
             zeroText();
 
         }
+        Debug.Log("button press");
     }
   
 
