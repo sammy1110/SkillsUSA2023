@@ -50,4 +50,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Forest 1.2.unity
     guid: cc386cb97deec004e8a68578ab8aab0d
+  - enabled: 1
+    path: Assets/Scenes/Email.unity
+    guid: 6da83435c404a5949860036af3a2ab87
+  - enabled: 1
+    path: Assets/Scenes/Email 1.2.unity
+    guid: 36e67f1b1853d394da17c0e9af09de36
+  - enabled: 1
+    path: Assets/Scenes/Computer 1.2.unity
+    guid: d9fd1316bf194ef4ab8d667523fa40b3
   m_configObjects: {}

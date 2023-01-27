@@ -6862,7 +6862,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1535181288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.58, y: -2.1, z: -10}
+  m_LocalPosition: {x: 1.83, y: -0.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1548347972}
@@ -7235,7 +7235,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 3
+  m_SortingOrder: 2
   m_Sprite: {fileID: -1687533226023187018, guid: 1c5e15d28e22d7f45a818828ad0d7b08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -7689,7 +7689,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1740970888}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.58, y: -2.1, z: -10}
+  m_LocalPosition: {x: 1.83, y: -0.63, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8125,8 +8125,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1946636185}
   - component: {fileID: 1946636188}
-  - component: {fileID: 1946636187}
   - component: {fileID: 1946636186}
+  - component: {fileID: 1946636187}
   m_Layer: 0
   m_Name: Door Close
   m_TagString: Untagged
@@ -8183,13 +8183,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1946636184}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa4b044a08ca0945bf59b6feccffe93, type: 3}
+  m_Script: {fileID: 11500000, guid: d0b0d56b1e99275479d9deaf8b1dba66, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 6831842499962388530}
   TimeBeforeNextScene: 0.5
   PlayerIsAtTheDoor: 0
-  sceneName: Inside House 1.2
 --- !u!212 &1946636188
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8868,7 +8867,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 5325530606801903077, guid: 1c5e15d28e22d7f45a818828ad0d7b08, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -8928,11 +8927,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6831842499653457329, guid: 29e9e47fc7afbbe43adace789a3830f8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.58
+      value: 1.83
       objectReference: {fileID: 0}
     - target: {fileID: 6831842499653457329, guid: 29e9e47fc7afbbe43adace789a3830f8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.1
+      value: -0.63
       objectReference: {fileID: 0}
     - target: {fileID: 6831842499653457329, guid: 29e9e47fc7afbbe43adace789a3830f8, type: 3}
       propertyPath: m_LocalPosition.z

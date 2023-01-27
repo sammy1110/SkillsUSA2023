@@ -1465,7 +1465,7 @@ GameObject:
   - component: {fileID: 1829263740}
   - component: {fileID: 1829263739}
   m_Layer: 0
-  m_Name: Screenshot 2022-12-04 232518 (1) (2) (1)
+  m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

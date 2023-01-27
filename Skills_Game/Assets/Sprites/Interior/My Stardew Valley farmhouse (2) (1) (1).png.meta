@@ -1,0 +1,396 @@
+fileFormatVersion: 2
+guid: f7ec0597470eac44bb153912088547c3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3241950413360666146
+    second: My Stardew Valley farmhouse (2) (1) (1)_0
+  - first:
+      213: 3270920499802074889
+    second: My Stardew Valley farmhouse (2) (1) (1)_1
+  - first:
+      213: 448284219833976590
+    second: My Stardew Valley farmhouse (2) (1) (1)_2
+  - first:
+      213: -2825265310570398487
+    second: My Stardew Valley farmhouse (2) (1) (1)_3
+  - first:
+      213: 6339914090897395015
+    second: My Stardew Valley farmhouse (2) (1) (1)_4
+  - first:
+      213: -6270139586024748933
+    second: My Stardew Valley farmhouse (2) (1) (1)_5
+  - first:
+      213: -3943223524405582766
+    second: My Stardew Valley farmhouse (2) (1) (1)_6
+  - first:
+      213: -2814801185745664070
+    second: My Stardew Valley farmhouse (2) (1) (1)_7
+  - first:
+      213: 3777679625536870937
+    second: My Stardew Valley farmhouse (2) (1) (1)_8
+  - first:
+      213: -652599591841011041
+    second: My Stardew Valley farmhouse (2) (1) (1)_9
+  - first:
+      213: 657575666764523533
+    second: My Stardew Valley farmhouse (2) (1) (1)_10
+  - first:
+      213: 336644702581054177
+    second: My Stardew Valley farmhouse (2) (1) (1)_11
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_0
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 1438
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2261bcf69b8bdfc20800000000000000
+      internalID: 3241950413360666146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_1
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 1446
+        width: 44
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90fee3f4dd4a46d20800000000000000
+      internalID: 3270920499802074889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_2
+      rect:
+        serializedVersion: 2
+        x: 474
+        y: 1205
+        width: 62
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e070e917f10a83600800000000000000
+      internalID: 448284219833976590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_3
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1225
+        width: 32
+        height: 76
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ecb73f3b24aac8d0800000000000000
+      internalID: -2825265310570398487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_4
+      rect:
+        serializedVersion: 2
+        x: 683
+        y: 1229
+        width: 24
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74dce6e7646ebf750800000000000000
+      internalID: 6339914090897395015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_5
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 1099
+        width: 32
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7841e2644dfbf8a0800000000000000
+      internalID: -6270139586024748933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_6
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 1099
+        width: 32
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25467ddb81bd649c0800000000000000
+      internalID: -3943223524405582766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 1082
+        width: 62
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab7084a2c31dfe8d0800000000000000
+      internalID: -2814801185745664070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_8
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 1058
+        width: 56
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91a1b5bba930d6430800000000000000
+      internalID: 3777679625536870937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_9
+      rect:
+        serializedVersion: 2
+        x: 722
+        y: 629
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9a60cbf02081f6f0800000000000000
+      internalID: -652599591841011041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_10
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 398
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d08a07eb59d202900800000000000000
+      internalID: 657575666764523533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: My Stardew Valley farmhouse (2) (1) (1)_11
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 295
+        width: 29
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ea5cd8c2900ca400800000000000000
+      internalID: 336644702581054177
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
