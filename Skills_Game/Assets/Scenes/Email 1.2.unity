@@ -787,7 +787,18 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Email
+  m_Text: 'MAYA IMPORTANT
+
+    The department has finally tracked down
+
+    the Telmatobius
+    Culeus we''ve been looking for it''s headed to the forest by your house. BE ON
+    THE LOOKOUT.
+
+
+    Sincerely,
+
+    Rebeca'
 --- !u!222 &986955551
 CanvasRenderer:
   m_ObjectHideFlags: 0

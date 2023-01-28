@@ -10,9 +10,9 @@ public class SceneSwitcher : MonoBehaviour
         SceneManager.LoadScene("Level 1");
     }
 
-    public void Setting()
+    public void Sandbox()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        SceneManager.LoadScene("Testing");
     }
 
     public void Back()
