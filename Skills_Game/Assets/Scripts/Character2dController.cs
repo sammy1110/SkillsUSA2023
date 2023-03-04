@@ -8,9 +8,15 @@ public class Character2dController : MonoBehaviour
 
     public Rigidbody2D rb;
     public Animator animator;
+    public static bool hasFrog;
 
     Vector2 movement;
 
+
+    public void Start()
+    {
+        transform.position = SceneSwitcher.globalspawn;
+    }
     public void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
@@ -20,6 +26,10 @@ public class Character2dController : MonoBehaviour
         animator.SetFloat("Vertical", movement.y);
         animator.SetFloat("Speed", movement.sqrMagnitude);
 
+        if (hasFrog)
+        {
+            animator.SetLayerWeight(1, 1);
+        }
     }
 
     public void FixedUpdate()

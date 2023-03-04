@@ -21,7 +21,7 @@ public class HomeScript : MonoBehaviour
     public IEnumerator OpenHome()
     {
         yield return new WaitForSeconds(TimeBeforeNextScene);
-        SceneManager.LoadScene("Level 1.2");
+        SceneManager.LoadScene("Level 1");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

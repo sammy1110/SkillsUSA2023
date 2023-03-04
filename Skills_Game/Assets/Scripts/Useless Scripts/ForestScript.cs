@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Forest_2_Script : MonoBehaviour
+public class ForestScript : MonoBehaviour
 {
 
     public GameObject player;
@@ -22,7 +22,7 @@ public class Forest_2_Script : MonoBehaviour
     public IEnumerator OpenForest()
     {
         yield return new WaitForSeconds(TimeBeforeNextScene);
-        SceneManager.LoadScene("Forest 1.2");
+        SceneManager.LoadScene("Forest");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -30,8 +30,9 @@ public class Forest_2_Script : MonoBehaviour
         if (collision.gameObject.tag == "Player")
         {
             PlayerIsAtTheForest = true;
-
+            
         }
+
 
     }
 

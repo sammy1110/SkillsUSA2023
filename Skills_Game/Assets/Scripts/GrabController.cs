@@ -16,8 +16,8 @@ public class GrabController : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position)< 1) 
         {
-            transform.parent = player.transform;
-            transform.localPosition = boxHolder.localPosition;
+            Character2dController.hasFrog= true;
+            Destroy(gameObject);
         }
     }
 }
