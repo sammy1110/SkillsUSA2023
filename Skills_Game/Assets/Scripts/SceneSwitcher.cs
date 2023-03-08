@@ -1,3 +1,4 @@
+using Cinemachine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneSwitcher : MonoBehaviour
 {
+    public Animator blackanim;
+    public CinemachineVirtualCamera MainVCam;
+    public float maxZoomIn = 3;
+    public float time = 2f;
+    public bool isTrans;
     public Vector2 localspawn;
     public static Vector2 globalspawn;
     public string sceneName;
@@ -13,18 +19,28 @@ public class SceneSwitcher : MonoBehaviour
     public void Start()
     {
         player = GameObject.Find("Maya");
+        MainVCam = GameObject.FindWithTag("Virtual Cam").GetComponent<CinemachineVirtualCamera>();
     }
-    public void SwitchScene(string sceneName)
+    IEnumerator SwitchScene(string scene, float delay)
     {
         SceneSwitcher.globalspawn = localspawn;
-        SceneManager.LoadScene(sceneName);
+        Debug.Log(scene);
+        yield return new WaitForSeconds(delay);      
+        SceneManager.LoadScene(scene);    
     }
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, player.transform.position) < 2) 
-        { 
-            SwitchScene(sceneName);
+        if(Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, player.transform.position) < 2 && !isTrans) 
+        {
+            StartCoroutine(SwitchScene(sceneName, time));
+            isTrans= true;
+            blackanim.SetTrigger("Trans");
+        }
+
+        if(isTrans)
+        {
+            MainVCam.m_Lens.OrthographicSize = Mathf.Lerp(MainVCam.m_Lens.OrthographicSize, maxZoomIn, Time.deltaTime);
         }
     }
 
