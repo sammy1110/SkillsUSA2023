@@ -974,6 +974,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c71175a0f01b39247a5e39140496996b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blackanim: {fileID: 0}
+  MainVCam: {fileID: 0}
+  maxZoomIn: 3
+  time: 2
+  isTrans: 0
+  localspawn: {x: 0, y: 0}
+  sceneName: 
+  player: {fileID: 0}
 --- !u!1 &1713091527
 GameObject:
   m_ObjectHideFlags: 0
