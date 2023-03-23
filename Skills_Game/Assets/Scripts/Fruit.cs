@@ -4,10 +4,9 @@ using UnityEngine;
 
 public class Fruit : MonoBehaviour
 {
-    public Transform grabDetect;
-    public Transform boxHolder;
-    public float rayDist;
     public GameObject player;
+    public Inventory inventory;
+    public GameObject fruit;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +19,8 @@ public class Fruit : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position) < 1 && Character2dController.hasFrog)
         {
             Character2dController.hasFruit = true;
-            Destroy(gameObject);
+            inventory.addItem(Instantiate(fruit), 1);
+            Destroy(this.gameObject);
         }
     }
 }

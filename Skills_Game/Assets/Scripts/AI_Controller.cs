@@ -46,6 +46,5 @@ public class AI_Controller : MonoBehaviour
             target = null;
         }
 
-        Debug.Log(Vector2.Distance(transform.position, player.transform.position));
     }
 }
