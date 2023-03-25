@@ -52,14 +52,25 @@ public class Inventory : MonoBehaviour
         if(items.Count < 12)
         {
             Item itemScript = item.GetComponent<Item>();
+            foreach (GameObject gameObject in items)
+            {
+                if(gameObject.name == item.name)
+                {
+                    gameObject.GetComponent<Item>().amount += amount;
+                    inventoryItems[items.IndexOf(gameObject)].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = gameObject.GetComponent<Item>().amount.ToString();
+                    Destroy(item);
+                    return;
+                }
+            }
+
             if(itemScript.amount < itemScript.Limit)
             {
                 itemScript.amount += amount;
             }
             items.Add(item);
             Debug.Log(item);
-            inventoryItems[inventoryCount].transform.GetChild(0).GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
-            inventoryItems[inventoryCount].transform.GetChild(0).gameObject.SetActive(true);
+            inventoryItems[inventoryCount].transform.GetChild(1).GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
+            inventoryItems[inventoryCount].transform.GetChild(1).gameObject.SetActive(true);
             inventoryItems[inventoryCount].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = itemScript.amount.ToString();
             inventoryCount++;
         }
@@ -80,5 +91,15 @@ public class Inventory : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void HighLightSquare(GameObject square)
+    {
+        square.SetActive (true);
+    }
+
+    public void UnHighLightSquare(GameObject square)
+    {
+        square.SetActive(false);
     }
 }
