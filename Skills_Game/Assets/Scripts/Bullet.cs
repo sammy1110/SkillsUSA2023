@@ -7,11 +7,13 @@ public class Bullet : MonoBehaviour
     public LayerMask collided;
     public float speed = 1.0f;
     public Rigidbody2D rb2D;
+    public float lifetime = 3;
 
     // Start is called before the first frame update
     void Start()
     {
         rb2D= GetComponent<Rigidbody2D>();
+        StartCoroutine(destroyBullet());
     }
 
     // Update is called once per frame
@@ -26,5 +28,11 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    IEnumerator destroyBullet()
+    {
+        yield return new WaitForSeconds(lifetime);
+        Destroy(gameObject);
     }
 }

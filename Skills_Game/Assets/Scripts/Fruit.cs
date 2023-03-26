@@ -19,7 +19,10 @@ public class Fruit : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position) < 1 && Character2dController.hasFrog)
         {
             Character2dController.hasFruit = true;
-            inventory.addItem(Instantiate(fruit), 1);
+            GameObject tempFruit = Instantiate(fruit);
+            tempFruit.name = "Apple";
+            inventory.addItem(tempFruit, 1);
+            Inventory.appleAmmo += 5;
             Destroy(this.gameObject);
         }
     }

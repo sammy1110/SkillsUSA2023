@@ -18,6 +18,8 @@ public class Character2dController : MonoBehaviour
 
     Vector2 movement;
 
+    public Inventory inventory;
+
 
     public void Start()
     {
@@ -70,7 +72,7 @@ public class Character2dController : MonoBehaviour
             animator.SetLayerWeight(1, 1);
         }
 
-        if(hasFruit && Input.GetKey(KeyCode.Mouse0) && canFire) 
+        if(hasFruit && Input.GetKey(KeyCode.Mouse0) && canFire && !Inventory.isOpen && Inventory.appleAmmo > 0) 
         {
             if (direction == "Forward")
             {
@@ -91,6 +93,8 @@ public class Character2dController : MonoBehaviour
 
             canFire= false;
             StartCoroutine(restockFruit());
+            Inventory.appleAmmo -= 1;
+            inventory.fruitBeGone("Apple");
         }
 
         if(direction != animationState)
