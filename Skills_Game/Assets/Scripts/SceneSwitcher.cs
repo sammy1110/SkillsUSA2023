@@ -44,11 +44,6 @@ public class SceneSwitcher : MonoBehaviour
         }
     }
 
-    public void PlayGame()
-    {
-        SceneManager.LoadScene("Level 1");
-    }
-
     public void Sandbox()
     {
         SceneManager.LoadScene("Testing");
@@ -74,5 +69,15 @@ public class SceneSwitcher : MonoBehaviour
     {
         Application.Quit();
         Debug.Log("QUIT!");
+    }
+
+    public void ChangeGlobalScene(string name)
+    {
+        LoadingScreen.sceneName = name;
+    }
+
+    public void normalSceneLoader(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 }

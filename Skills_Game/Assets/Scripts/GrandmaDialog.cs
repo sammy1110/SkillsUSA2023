@@ -4,20 +4,29 @@ using UnityEngine;
 
 public class GrandmaDialog : MonoBehaviour
 {
+    Dialog speak;
+    public GameObject book;
+
     // Start is called before the first frame update
     void Start()
     {
+        speak = GetComponent<Dialog>();
+
         if (Character2dController.hasFrog)
         {
-            GetComponent<Dialog>().dialogue[0] = "Hey mija I see you returned.";
-            GetComponent<Dialog>().dialogue[1] = "Looks like you found the Rare Frog.";
-            GetComponent<Dialog>().dialogue[2] = "Adios Mija and good luck again.";
+            speak.dialogue[0] = "Hey mija I see you returned.";
+            speak.dialogue[1] = "Looks like you found the Rare Frog.";
+            speak.dialogue[2] = "Adios Mija,also here is this book to help you and good luck again.";
         }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (speak.index == 2 && !Inventory.hasBook && Character2dController.hasFrog)
+        {
+            Inventory.hasBook = true;
+            DontDestroyOnLoad(Instantiate(book));
+        }
     }
 }

@@ -500,7 +500,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -1544,6 +1544,7 @@ MonoBehaviour:
   - 'Hi mija '
   - I'll be on the look out for your little frog
   - Good Luck Mija
+  index: 0
   typingSpeed: 0.06
   playerIsClose: 0
   contButton: {fileID: 1586239792}
@@ -1624,6 +1625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f81474b326215be4887d9d9a19f88c60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  book: {fileID: 8436286561614341861, guid: 2278711bd29e39c42a41262214ef5ca4, type: 3}
 --- !u!1 &1236486025
 GameObject:
   m_ObjectHideFlags: 3

@@ -23,6 +23,8 @@ public class Inventory : MonoBehaviour
     public static int appleAmmo;
     public static int cherryAmmo;
 
+    public static bool hasBook;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +34,7 @@ public class Inventory : MonoBehaviour
         }
 
         visibility = GetComponent<CanvasGroup>();
+        visibility.interactable= false;
     }
 
     // Update is called once per frame
@@ -57,10 +60,12 @@ public class Inventory : MonoBehaviour
 
         if(isOpen)
         {
-            if (Input.GetKeyDown(KeyCode.Tab)) 
+            if (Input.GetKeyDown(KeyCode.Tab))
             {
                 visibility.alpha = 0;
-                isOpen= false;
+                visibility.interactable = false;
+                isOpen = false;
+                visibility.blocksRaycasts = false;
             }
         }
         else
@@ -68,7 +73,9 @@ public class Inventory : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Tab))
             {
                 visibility.alpha = 1;
+                visibility.interactable = true;
                 isOpen= true;
+                visibility.blocksRaycasts = true;
             }
         }     
     }

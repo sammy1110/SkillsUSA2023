@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5627,6 +5627,7 @@ MonoBehaviour:
   - Oh My Goodness it's you
   - 'The rare Telmatobius Culeus we''ve been looking for '
   - 'You''re coming with me we''re headed to grandmas house '
+  index: 0
   typingSpeed: 0.06
   playerIsClose: 0
   contButton: {fileID: 1895688405}
