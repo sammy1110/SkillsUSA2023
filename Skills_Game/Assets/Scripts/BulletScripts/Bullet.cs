@@ -35,4 +35,9 @@ public class Bullet : MonoBehaviour
         yield return new WaitForSeconds(lifetime);
         Destroy(gameObject);
     }
+
+    void OnDestroy()
+    {
+        Debug.Log("why did you do that");
+    }
 }

@@ -47,4 +47,9 @@ public class AI_Controller : MonoBehaviour
         }
 
     }
+
+    public void hurty()
+    {
+        Destroy(gameObject);
+    }
 }

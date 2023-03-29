@@ -13,12 +13,15 @@ public class Inventory : MonoBehaviour
     public GameObject[] inventoryItems = new GameObject[12];
     public int inventoryCount = 0;
 
+    Character2dController player;
+
     private GameObject itemSlot;
 
     public static bool isOpen;
     CanvasGroup visibility;
 
     public static int appleAmmo;
+    public static int cherryAmmo;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +37,24 @@ public class Inventory : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (player == null)
+        {
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<Character2dController>();
+        }
+
+        switch(player.currentWeapon)
+        {
+            case "Apple":
+                ammoCounter.text = "Ammo: " + appleAmmo.ToString();
+                break;
+
+            case "Cherries":
+                ammoCounter.text ="Ammo: " + cherryAmmo.ToString();
+                break;
+            default:
+                break;
+        }
+
         if(isOpen)
         {
             if (Input.GetKeyDown(KeyCode.Tab)) 
@@ -49,8 +70,7 @@ public class Inventory : MonoBehaviour
                 visibility.alpha = 1;
                 isOpen= true;
             }
-        }
-        ammoCounter.text = "Ammo: " + appleAmmo.ToString();
+        }     
     }
 
     public void addItem(GameObject item, int amount)
@@ -77,6 +97,7 @@ public class Inventory : MonoBehaviour
             Debug.Log(item);
             inventoryItems[inventoryCount].transform.GetChild(1).GetComponent<Image>().sprite = item.GetComponent<SpriteRenderer>().sprite;
             inventoryItems[inventoryCount].transform.GetChild(1).gameObject.SetActive(true);
+            inventoryItems[inventoryCount].transform.GetChild(1).gameObject.name = item.name;
             inventoryItems[inventoryCount].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = itemScript.amount.ToString();
             inventoryCount++;
         }
@@ -84,37 +105,21 @@ public class Inventory : MonoBehaviour
 
     public void removeItem(GameObject item, int amount)
     {
-            if (items.Contains(item))
-            {
-                Item itemScript = item.GetComponent<Item>();
-                itemScript.amount -= amount;
-                inventoryItems[items.IndexOf(item)].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = itemScript.amount.ToString();
-            if (itemScript.amount <= 0)
-                {
-                    inventoryItems[items.IndexOf(item)].transform.GetChild(1).gameObject.SetActive(false);
-                    inventoryItems[items.IndexOf(item)].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = null;
-                    items.Remove(item);
-                    inventoryCount--;
-                }
-            }
-    }
-
-    public void removeItem(string name, int amount)
-    {
-        foreach (GameObject gameObject in items)
+        if (items.Contains(item))
         {
-            if (name == gameObject.name)
+            Item itemScript = item.GetComponent<Item>();
+            itemScript.amount -= amount;
+            inventoryItems[items.IndexOf(item)].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = itemScript.amount.ToString();
+            if (itemScript.amount <= 0)
             {
-                Item itemScript = gameObject.GetComponent<Item>();
-                itemScript.amount -= amount;
-                inventoryItems[items.IndexOf(gameObject)].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = itemScript.amount.ToString();
-                if (itemScript.amount <= 0)
-                {
-                    items.Remove(gameObject);
-                    inventoryCount--;
-                }
+                inventoryItems[items.IndexOf(item)].transform.GetChild(1).gameObject.SetActive(false);
+                inventoryItems[items.IndexOf(item)].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = null;
+                items.Remove(item);
+                Debug.Log(item.name);
+                Destroy(item);
+                inventoryCount--;
             }
-        }
+        }       
     }
 
     public void HighLightSquare(GameObject square)
@@ -129,16 +134,29 @@ public class Inventory : MonoBehaviour
 
     public void fruitBeGone(string name)
     {
-        foreach (GameObject gameObject in items)
+        for (int i = 0; i < items.Count; i++)
         {
-            if (gameObject.name == name)
+            if (items[i].name == name)
             {
+                GameObject gameObject = items[i];
+
                 if(name == "Apple" && appleAmmo - 5 *  gameObject.GetComponent<Item>().amount <= -5)
                 {
                     removeItem(gameObject, 1);
-                    Debug.Log("Father");
+                    Debug.Log("Gone");
+                }
+
+                if (name == "Cherries" && cherryAmmo - 2 * gameObject.GetComponent<Item>().amount <= -2)
+                {
+                    removeItem(gameObject, 1);
+                    Debug.Log("Gone");
                 }
             }
         }
+    }
+
+    public void SwitchWeapon(GameObject gameObject)
+    {
+        player.SwitchWeapon(gameObject.name);
     }
 }

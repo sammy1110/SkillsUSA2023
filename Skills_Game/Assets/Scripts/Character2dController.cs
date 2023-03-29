@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using UnityEngine;
 
 public class Character2dController : MonoBehaviour
@@ -15,6 +16,9 @@ public class Character2dController : MonoBehaviour
     public string direction;
     public GameObject bulletPrefab;
     public string animationState;
+    public string currentWeapon;
+    public GameObject[] fruits;
+    public int fruitIndex;
 
     Vector2 movement;
 
@@ -72,29 +76,10 @@ public class Character2dController : MonoBehaviour
             animator.SetLayerWeight(1, 1);
         }
 
-        if(hasFruit && Input.GetKey(KeyCode.Mouse0) && canFire && !Inventory.isOpen && Inventory.appleAmmo > 0) 
+        if(hasFruit && Input.GetKey(KeyCode.Mouse0) && canFire && !Inventory.isOpen) 
         {
-            if (direction == "Forward")
-            {
-                Instantiate(bulletPrefab, transform.position + Vector3.up, Quaternion.identity, null);
-            }
-            else if (direction == "Backward")
-            {
-                Instantiate(bulletPrefab, transform.position + Vector3.down, Quaternion.Euler(0,0,180), null);
-            }
-            else if (direction == "Right")
-            {
-                Instantiate(bulletPrefab, transform.position + Vector3.right, Quaternion.Euler(0, 0, -90), null);
-            }
-            else if (direction == "Left")
-            {
-                Instantiate(bulletPrefab, transform.position + Vector3.left, Quaternion.Euler(0, 0, 90), null);
-            }
-
-            canFire= false;
             StartCoroutine(restockFruit());
-            Inventory.appleAmmo -= 1;
-            inventory.fruitBeGone("Apple");
+            Shoot();         
         }
 
         if(direction != animationState)
@@ -115,7 +100,63 @@ public class Character2dController : MonoBehaviour
         canFire = true;
     }
 
+    public void Shoot()
+    {
+        canFire = false;     
 
+        switch (currentWeapon)
+        {
+            case "Apple":
+                if (Inventory.appleAmmo > 0)
+                {
+                    Inventory.appleAmmo -= 1;
+                    fruitIndex = 0;
+                    inventory.fruitBeGone("Apple");
+                }
+                else
+                {
+                    return;
+                }
+                break;
 
+            case "Cherries":
+                if (Inventory.cherryAmmo > 0)
+                {
+                    Inventory.cherryAmmo -= 1;
+                    fruitIndex = 1;
+                    inventory.fruitBeGone("Cherries");
+                    Debug.Log("Fire Cherry: " + Inventory.cherryAmmo);
+                }
+                else
+                {
+                    Debug.Log("failed");
+                    return;
+                }
+                break;
+            default:
+                return;
+        }
 
+        if (direction == "Forward")
+        {
+            Instantiate(fruits[fruitIndex], transform.position + Vector3.up, Quaternion.identity, null);
+        }
+        else if (direction == "Backward")
+        {
+            Instantiate(fruits[fruitIndex], transform.position + Vector3.down, Quaternion.Euler(0, 0, 180), null);
+        }
+        else if (direction == "Right")
+        {
+            Instantiate(fruits[fruitIndex], transform.position + Vector3.right, Quaternion.Euler(0, 0, -90), null);
+        }
+        else if (direction == "Left")
+        {
+            Instantiate(fruits[fruitIndex], transform.position + Vector3.left, Quaternion.Euler(0, 0, 90), null);
+        }      
+    }
+
+    public void SwitchWeapon(string name)
+    {
+        currentWeapon = name;
+    }
 }

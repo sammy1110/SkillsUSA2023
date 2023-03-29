@@ -7,6 +7,8 @@ public class Item : MonoBehaviour
     public int amount;
     public int Limit;
 
+
+
     // Start is called before the first frame update
     void Start()
     {

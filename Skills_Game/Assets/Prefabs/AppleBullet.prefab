@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -5639365104900174950}
   - component: {fileID: 7030021647021569134}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: AppleBullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
