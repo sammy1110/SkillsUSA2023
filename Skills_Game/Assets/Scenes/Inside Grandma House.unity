@@ -1751,6 +1751,8 @@ MonoBehaviour:
   localspawn: {x: 11.74, y: 12.72}
   sceneName: Level 1
   player: {fileID: 0}
+  prompt: {fileID: 0}
+  promptPrefab: {fileID: 4709298103844142068, guid: 563b47c6898ff51438e334d81b9b910d, type: 3}
 --- !u!61 &1486019529
 BoxCollider2D:
   m_ObjectHideFlags: 0

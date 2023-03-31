@@ -15,11 +15,15 @@ public class SceneSwitcher : MonoBehaviour
     public static Vector2 globalspawn;
     public string sceneName;
     public GameObject player;
+    public GameObject prompt;
+    public GameObject promptPrefab;
 
     public void Start()
     {
         player = GameObject.Find("Maya");
         MainVCam = GameObject.FindWithTag("Virtual Cam").GetComponent<CinemachineVirtualCamera>();
+        prompt = Instantiate(promptPrefab, transform);
+        prompt.transform.localPosition = new Vector2(0.5f, 0.1f);
     }
     IEnumerator SwitchScene(string scene, float delay)
     {
@@ -31,11 +35,20 @@ public class SceneSwitcher : MonoBehaviour
 
     public void Update()
     {
-        if(Input.GetKeyDown(KeyCode.E) && Vector2.Distance(transform.position, player.transform.position) < 2 && !isTrans) 
+        if(Vector2.Distance(transform.position, player.transform.position) < 1 && !isTrans) 
         {
-            StartCoroutine(SwitchScene(sceneName, time));
-            isTrans= true;
-            blackanim.SetTrigger("Trans");
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                StartCoroutine(SwitchScene(sceneName, time));
+                isTrans = true;
+                blackanim.SetTrigger("Trans");
+            } 
+            prompt.SetActive(true);
+            prompt.transform.position = player.transform.position + Vector3.up;
+        }
+        else
+        {
+            prompt.SetActive(false);
         }
 
         if(isTrans)

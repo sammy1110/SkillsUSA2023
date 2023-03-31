@@ -2629,6 +2629,8 @@ MonoBehaviour:
   localspawn: {x: -9.8, y: -2.08}
   sceneName: Level 1
   player: {fileID: 0}
+  prompt: {fileID: 0}
+  promptPrefab: {fileID: 4709298103844142068, guid: 563b47c6898ff51438e334d81b9b910d, type: 3}
 --- !u!1001 &931432827
 PrefabInstance:
   m_ObjectHideFlags: 0

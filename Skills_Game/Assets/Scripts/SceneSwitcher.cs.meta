@@ -3,7 +3,12 @@ guid: c71175a0f01b39247a5e39140496996b
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - blackanim: {instanceID: 0}
+  - MainVCam: {instanceID: 0}
+  - player: {instanceID: 0}
+  - prompt: {instanceID: 0}
+  - promptPrefab: {fileID: 4709298103844142068, guid: 563b47c6898ff51438e334d81b9b910d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
