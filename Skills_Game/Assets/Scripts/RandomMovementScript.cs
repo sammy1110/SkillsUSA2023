@@ -34,7 +34,7 @@ public class RandomMovementScript : MonoBehaviour
 
     bool RandomPoint(Vector3 center, float range, out Vector3 result)
     {
-        Vector3 RandomPoint = center + Random.insideUnitSphere * range;
+        Vector3 randomPoint = center + Random.insideUnitSphere * range;
         NavMeshHit hit;
 
         if(NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
@@ -48,7 +48,5 @@ public class RandomMovementScript : MonoBehaviour
         return false;
 
     }
-
-   
 
 }
