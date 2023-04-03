@@ -1,52 +1,33 @@
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.AI;
 
 public class RandomMovementScript : MonoBehaviour
 {
-
-    public NavMeshAgent agent;
-    public float range;
-
-    public Transform centrePoint;
+    public Vector2 currentPos;
+    public Vector2[] positions;
+    public float speed;
+    private Rigidbody2D rb2d;
 
     private void Start()
     {
-        agent = GetComponent<NavMeshAgent>();
+        rb2d = GetComponent<Rigidbody2D>();
+        currentPos = positions[Random.Range(0, positions.Length)];
     }
 
-    private void Update()
+    void FixedUpdate()
     {
-        if (agent.remainingDistance <= agent.stoppingDistance)
-        {
-            Vector3 point;
-            if (RandomPoint(centrePoint.position, range, out point))
-            {
-                Debug.DrawRay(point, Vector3.up, Color.blue, 1.0f);
-                agent.SetDestination(point);
-
-            }
-
+       if (Vector2.Distance(new Vector2(transform.position.x, transform.position.y), currentPos) > 0.5f)
+       {
+            rb2d.MovePosition(new Vector2(transform.position.x, transform.position.y) + (currentPos - new Vector2(transform.position.x, transform.position.y)).normalized * speed * Time.deltaTime);
+            Debug.Log("doing something");
         }
-    }
-
-
-    bool RandomPoint(Vector3 center, float range, out Vector3 result)
-    {
-        Vector3 randomPoint = center + Random.insideUnitSphere * range;
-        NavMeshHit hit;
-
-        if(NavMesh.SamplePosition(randomPoint, out hit, 1.0f, NavMesh.AllAreas))
+        else
         {
-            result = hit.position;
-            return true;
+            currentPos = positions[Random.Range(0, positions.Length)];
         }
 
-
-        result = Vector3.zero;
-        return false;
-
+        
     }
-
 }
