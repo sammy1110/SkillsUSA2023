@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Character2dController : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class Character2dController : MonoBehaviour
     public string currentWeapon;
     public GameObject[] fruits;
     public int fruitIndex;
+    public float invulnerableTime = 1;
+    public Image healthBar;
+    public bool canHurt = true;
+    public float health = 100;
 
     Vector2 movement;
 
@@ -28,10 +33,19 @@ public class Character2dController : MonoBehaviour
     public void Start()
     {
         transform.position = SceneSwitcher.globalspawn;
-        direction = "Backward";
+        direction = "Backward";  
     }
     public void Update()
-    {
+    {        
+        if (healthBar == null)
+        {
+            healthBar = GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(0).GetComponent<Image>();
+            DontDestroyOnLoad(healthBar.transform.root);
+            Debug.Log(healthBar);      
+        }
+
+        healthBar.fillAmount = health/100;
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
@@ -158,5 +172,23 @@ public class Character2dController : MonoBehaviour
     public void SwitchWeapon(string name)
     {
         currentWeapon = name;
+    }
+
+    public void HurtPlayer(float hurtAmount)
+    {
+        if (!canHurt)
+        {
+            return;
+        }
+
+        canHurt = false;
+        StartCoroutine(hurtTick());
+        health = Mathf.Clamp(health - hurtAmount, 0, 100);
+    }
+
+    IEnumerator hurtTick()
+    {
+        yield return new WaitForSeconds(invulnerableTime);
+        canHurt = true;
     }
 }

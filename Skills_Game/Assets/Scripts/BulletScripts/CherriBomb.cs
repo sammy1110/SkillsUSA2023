@@ -32,7 +32,7 @@ public class CherriBomb : MonoBehaviour
         Collider2D[] closepeople = Physics2D.OverlapCircleAll(transform.position, radius, layerMask);
         foreach(Collider2D gameObject in closepeople)
         {
-            gameObject.SendMessage("hurty");
+            gameObject.SendMessage("hurty", 50);
         }
         Destroy(gameObject);
     }

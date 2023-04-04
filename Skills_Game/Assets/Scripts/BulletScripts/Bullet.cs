@@ -28,6 +28,8 @@ public class Bullet : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        collision.gameObject.SendMessage("hurty", 15);
     }
 
     IEnumerator destroyBullet()
