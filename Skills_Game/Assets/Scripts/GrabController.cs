@@ -9,7 +9,7 @@ public class GrabController : MonoBehaviour
     public float rayDist;
     public LayerMask Fwog;
     public GameObject player;
-
+    public GameObject healthBar;
 
     // Update is called once per frame
     void Update()
@@ -18,6 +18,8 @@ public class GrabController : MonoBehaviour
         {
             Character2dController.hasFrog= true;
             Destroy(gameObject);
+            GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(1).gameObject.SetActive(true);
         }
     }
 }

@@ -62,13 +62,13 @@ public class AI_Controller : MonoBehaviour
             playerScript.HurtPlayer(20);
         }
 
-        BackGroundFade.alpha = Mathf.Clamp(BackGroundFade.alpha -= Time.deltaTime, 0, 1);
+        BackGroundFade.alpha = Mathf.Clamp(BackGroundFade.alpha -= Time.deltaTime, 0, 2);
 
     }
 
     public void hurty(float hurtAmount)
     {
-        BackGroundFade.alpha = 1;
+        BackGroundFade.alpha = 2;
         health = Mathf.Clamp(health - hurtAmount, 0, 100);
         if (health <=0)
         {
