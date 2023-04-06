@@ -24,6 +24,11 @@ public class SceneSwitcher : MonoBehaviour
         MainVCam = GameObject.FindWithTag("Virtual Cam").GetComponent<CinemachineVirtualCamera>();
         prompt = Instantiate(promptPrefab, transform);
         prompt.transform.localPosition = new Vector2(0.5f, 0.1f);
+
+        if (SceneManager.GetActiveScene().name == "Level 1")
+        {
+            Character2dController.hasHud= true;
+        }
     }
     IEnumerator SwitchScene(string scene, float delay)
     {

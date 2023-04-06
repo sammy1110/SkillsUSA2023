@@ -11,6 +11,7 @@ public class CherriBomb : MonoBehaviour
 
     public float speed = 5f;
     public float explodeTime = 1f;
+    public GameObject explosion;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,7 @@ public class CherriBomb : MonoBehaviour
         {
             gameObject.SendMessage("hurty", 50);
         }
+        Instantiate(explosion, transform.position,Quaternion.identity);
         Destroy(gameObject);
     }
 }

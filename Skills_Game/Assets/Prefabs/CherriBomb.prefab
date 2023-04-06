@@ -120,6 +120,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1
-  radius: 5
+  radius: 3
   speed: 5
   explodeTime: 3
+  explosion: {fileID: 2522761135949196462, guid: 37df2c422c1f20546b00de59dbba8371, type: 3}

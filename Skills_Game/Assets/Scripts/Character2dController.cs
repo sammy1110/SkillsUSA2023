@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Character2dController : MonoBehaviour
 {
     public float MovementSpeed = 3f;
 
+    public static bool hasHud;
     public Rigidbody2D rb;
     public Animator animator;
     public static bool hasFrog;
@@ -25,6 +27,8 @@ public class Character2dController : MonoBehaviour
     public bool canHurt = true;
     public float health = 100;
 
+    string currentLevel;
+
     Vector2 movement;
 
     public Inventory inventory;
@@ -36,15 +40,19 @@ public class Character2dController : MonoBehaviour
         direction = "Backward";  
     }
     public void Update()
-    {        
-        if (healthBar == null)
+    { 
+        currentLevel = SceneManager.GetActiveScene().name;
+
+        if (healthBar == null && hasHud)
         {
             healthBar = GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(0).GetComponent<Image>();
             DontDestroyOnLoad(healthBar.transform.root);
             Debug.Log(healthBar);      
         }
-
-        healthBar.fillAmount = health/100;
+        else if (hasHud)
+        {
+            healthBar.fillAmount = health / 100;
+        }       
 
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
