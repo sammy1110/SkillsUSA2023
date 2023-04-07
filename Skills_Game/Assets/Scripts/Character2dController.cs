@@ -37,7 +37,11 @@ public class Character2dController : MonoBehaviour
     public void Start()
     {
         transform.position = SceneSwitcher.globalspawn;
-        direction = "Backward";  
+        direction = "Backward";
+        if (SceneManager.GetActiveScene().name == "Testing")
+        {
+            hasHud= true;
+        }
     }
     public void Update()
     { 
@@ -198,5 +202,10 @@ public class Character2dController : MonoBehaviour
     {
         yield return new WaitForSeconds(invulnerableTime);
         canHurt = true;
+    }
+
+    public void hurty(float amount)
+    {
+        health -= amount;
     }
 }

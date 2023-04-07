@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Boss : MonoBehaviour
 {
@@ -11,16 +12,22 @@ public class Boss : MonoBehaviour
     public bool canShoot;
     public int dashAmount;
     public int kunaiAmount = 5;
-    public float coolDown = 0.7f;
+    public float KunaicoolDown = 0.7f;
     public float dashSpeed = 8f;
     public float health;
     public float speed = 3f;
     public float damage;
+    public float dashCoolDown;
+    public bool canDash;
     public string currentState = "Chasing Player";
+    public float actualAlpha;
 
     Rigidbody2D rb2D;
     Character2dController playerScript;
     GameObject player;
+    GameObject healthBarBackGround;
+    CanvasGroup healthAlpha;
+    Image healthBar;
 
 
     // Start is called before the first frame update
@@ -29,11 +36,21 @@ public class Boss : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
         playerScript = player.GetComponent<Character2dController>();
         rb2D = GetComponent<Rigidbody2D>();
+        healthAlpha = transform.GetChild(0).GetComponent<CanvasGroup>();
+        healthBarBackGround = healthAlpha.transform.GetChild(0).gameObject;
+        healthBar = healthBarBackGround.transform.GetChild(0).GetComponent<Image>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        healthBar.fillAmount = health / 200;
+
+        healthBarBackGround.transform.position = Camera.main.WorldToScreenPoint(transform.position + Vector3.one);
+
+        healthAlpha.alpha = actualAlpha;
+        actualAlpha -= Time.deltaTime;
+
         switch (currentState)
         {
             case "Chasing Player":
@@ -47,13 +64,77 @@ public class Boss : MonoBehaviour
                 rb2D.AddForce((player.transform.position - transform.position) * speed);
                 Debug.Log(new Vector3(Mathf.Sin(Time.time * TimeScale) * speed, Mathf.Sin(Time.time * TimeScale) * speed, 0));
                 break;
+           case "StaringDownPlayer":
+                transform.right = player.transform.position - transform.position;
+                if (canDash)
+                {
+                    StartCoroutine(restoreDash());
+                    rb2D.AddForce((player.transform.position - transform.position).normalized * dashSpeed, ForceMode2D.Impulse);
+                }
+                break;
 
+          case "PhaseTwo":
+                transform.right = player.transform.position - transform.position;
+
+                if (canShoot && kunaiAmount > 0)
+                {
+                    Destroy(Instantiate(kunai, transform.position, transform.rotation), 3);
+                    StartCoroutine(kunaiCoolDown());
+                    kunaiAmount--;
+                }
+                else if (kunaiAmount == 0)
+                {
+                    currentState = "Dashing";
+                    dashCoolDown = 0.5f;
+                    dashAmount = 6;
+                }
+                break;
+            case "Dashing":
+                transform.right = player.transform.position - transform.position;
+
+                if (canDash && dashAmount > 0)
+                {
+                    dashAmount--;
+                    StartCoroutine(restoreDash());
+                    rb2D.AddForce((player.transform.position - transform.position).normalized * dashSpeed, ForceMode2D.Impulse);
+                }
+                else if (dashAmount == 0)
+                {
+                    currentState = "PhaseTwo";
+                    kunaiAmount = 3;
+                }
+                break;
         }
     }
 
     IEnumerator kunaiCoolDown()
     {
-        yield return new WaitForSeconds(coolDown);
-        canShoot= true;
+        canShoot = false;
+        yield return new WaitForSeconds(KunaicoolDown);
+        canShoot = true;
+    }
+
+    IEnumerator restoreDash()
+    {
+        canDash= false;
+        yield return new WaitForSeconds(dashCoolDown);
+        canDash= true;
+    }
+
+    public void hurty(float amount)
+    {
+        health -= amount;
+        actualAlpha = 2;
+
+        if(health <=100)
+        {
+            kunaiAmount = 3;
+            currentState = "PhaseTwo";
+        }
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 }

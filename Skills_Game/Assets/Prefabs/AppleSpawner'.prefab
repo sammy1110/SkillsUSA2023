@@ -100,7 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d42df34c093a9fa478fbf81050ae9713, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 6800400333496473493, guid: c3cfaa47739e98943838c880eca624aa, type: 3}
   inventory: {fileID: 0}
   fruit: {fileID: 2160276257143589127, guid: 9c4e4b971c99d3940b4ab510e0b529bf, type: 3}
   fruitName: Apple

@@ -1,7 +1,10 @@
 fileFormatVersion: 2
-guid: c05535fd25efac64881005aca8c842c4
+guid: 2bf9732c02dcb1a448c85b9eea82edec
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 2001010190010402755
+    second: Screenshot 2023-01-18 104542 (1) (4) (1)_0
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -89,7 +92,28 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Screenshot 2023-01-18 104542 (1) (4) (1)_0
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 209
+        width: 157
+        height: 220
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c7c18f7a2405cb10800000000000000
+      internalID: 2001010190010402755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

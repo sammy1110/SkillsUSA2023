@@ -8,6 +8,7 @@ public class Bullet : MonoBehaviour
     public float speed = 1.0f;
     public Rigidbody2D rb2D;
     public float lifetime = 3;
+    public bool enemyBullet;
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,15 @@ public class Bullet : MonoBehaviour
             Destroy(gameObject);
         }
 
-        collision.gameObject.SendMessage("hurty", 15);
+        if (collision.gameObject.tag == "Player" && enemyBullet)
+        {
+            collision.gameObject.SendMessage("hurty", 15);
+        } 
+
+        if (collision.gameObject.tag != "Player" &&  !enemyBullet)
+        {
+            collision.gameObject.SendMessage("hurty", 15);
+        }
     }
 
     IEnumerator destroyBullet()
