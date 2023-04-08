@@ -21,6 +21,7 @@ public class Boss : MonoBehaviour
     public bool canDash;
     public string currentState = "Chasing Player";
     public float actualAlpha;
+    public float TransTime = 3;
 
     Rigidbody2D rb2D;
     Character2dController playerScript;
@@ -39,6 +40,7 @@ public class Boss : MonoBehaviour
         healthAlpha = transform.GetChild(0).GetComponent<CanvasGroup>();
         healthBarBackGround = healthAlpha.transform.GetChild(0).gameObject;
         healthBar = healthBarBackGround.transform.GetChild(0).GetComponent<Image>();
+        Invoke("StartOff", 3);
     }
 
     // Update is called once per frame
@@ -71,6 +73,14 @@ public class Boss : MonoBehaviour
                     StartCoroutine(restoreDash());
                     rb2D.AddForce((player.transform.position - transform.position).normalized * dashSpeed, ForceMode2D.Impulse);
                 }
+
+                if (health <= 100)
+                {
+                    kunaiAmount = 3;
+                    currentState = "Transform";
+                    StartCoroutine(transformation());
+                }
+
                 break;
 
           case "PhaseTwo":
@@ -104,6 +114,17 @@ public class Boss : MonoBehaviour
                     kunaiAmount = 3;
                 }
                 break;
+            case "Transform":
+                break;
+
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player")
+        {
+            collision.gameObject.SendMessage("HurtPlayer", 20);
         }
     }
 
@@ -121,20 +142,25 @@ public class Boss : MonoBehaviour
         canDash= true;
     }
 
+    IEnumerator transformation()
+    {
+        yield return new WaitForSeconds(TransTime);
+        currentState = "PhaseTwo";
+    }
+
     public void hurty(float amount)
     {
         health -= amount;
         actualAlpha = 2;
 
-        if(health <=100)
-        {
-            kunaiAmount = 3;
-            currentState = "PhaseTwo";
-        }
-
         if (health <= 0)
         {
             Destroy(gameObject);
         }
+    }
+
+    public void StartOff()
+    {
+        currentState = "StaringDownPlayer";
     }
 }

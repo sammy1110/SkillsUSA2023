@@ -22,7 +22,7 @@ public class Character2dController : MonoBehaviour
     public string currentWeapon;
     public GameObject[] fruits;
     public int fruitIndex;
-    public float invulnerableTime = 1;
+    private float invulnerableTime = 1;
     public Image healthBar;
     public bool canHurt = true;
     public float health = 100;
@@ -32,6 +32,7 @@ public class Character2dController : MonoBehaviour
     Vector2 movement;
 
     public Inventory inventory;
+    SpriteRenderer sprite;
 
 
     public void Start()
@@ -42,10 +43,24 @@ public class Character2dController : MonoBehaviour
         {
             hasHud= true;
         }
+        sprite = GetComponent<SpriteRenderer>();
     }
     public void Update()
     { 
         currentLevel = SceneManager.GetActiveScene().name;
+
+        if (!canHurt)
+        {
+            Color color = sprite.color;
+            color.a = Mathf.Sin(Time.time * 50);
+            sprite.color = color;
+        }
+        else
+        {
+            Color color = sprite.color;
+            color.a = 1;
+            sprite.color = color;
+        }
 
         if (healthBar == null && hasHud)
         {
