@@ -601,6 +601,7 @@ GameObject:
   - component: {fileID: 118969337}
   - component: {fileID: 118969338}
   - component: {fileID: 118969339}
+  - component: {fileID: 118969340}
   m_Layer: 0
   m_Name: Timeline
   m_TagString: Untagged
@@ -656,6 +657,18 @@ MonoBehaviour:
   clone: {fileID: 1897558724}
   player: {fileID: 2139056984}
   playPos: {x: -1, y: 5.2, z: 0}
+--- !u!114 &118969340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 118969336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970bcddd98e4dd84b92708e02abdf407, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &120288217
 GameObject:
   m_ObjectHideFlags: 3
@@ -9139,7 +9152,7 @@ MonoBehaviour:
   isTrans: 0
   localspawn: {x: -1.8, y: 5.4}
   sceneName: Computer
-  player: {fileID: 0}
+  player: {fileID: 2139056984}
   prompt: {fileID: 0}
   promptPrefab: {fileID: 4709298103844142068, guid: 563b47c6898ff51438e334d81b9b910d, type: 3}
 --- !u!1 &817213067

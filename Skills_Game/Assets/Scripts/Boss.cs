@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq.Expressions;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -29,6 +30,7 @@ public class Boss : MonoBehaviour
     GameObject healthBarBackGround;
     CanvasGroup healthAlpha;
     Image healthBar;
+    TextMeshProUGUI Counter;
 
 
     // Start is called before the first frame update
@@ -40,6 +42,7 @@ public class Boss : MonoBehaviour
         healthAlpha = transform.GetChild(0).GetComponent<CanvasGroup>();
         healthBarBackGround = healthAlpha.transform.GetChild(0).gameObject;
         healthBar = healthBarBackGround.transform.GetChild(0).GetComponent<Image>();
+        Counter = healthBarBackGround.transform.GetChild(1).GetComponent<TextMeshProUGUI>();
         Invoke("StartOff", 3);
     }
 
@@ -47,6 +50,8 @@ public class Boss : MonoBehaviour
     void Update()
     {
         healthBar.fillAmount = health / 200;
+
+        Counter.text = health.ToString();
 
         healthBarBackGround.transform.position = Camera.main.WorldToScreenPoint(transform.position + Vector3.one);
 

@@ -22,16 +22,19 @@ public class TimeLineManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (BeginningCutScene.cutSceneDone)
+        {
+            Destroy(clone);
+            Destroy(gameObject);
+            return;
+        }
+
+
         if (playabale.playableAsset.duration <= playabale.time)
         {
             player.transform.position = playPos;
 
-            Destroy(clone);
-            Destroy(gameObject);
-        }
-
-        if (Time.time > 10)
-        {
+            this.SendMessage("CutSceneDone");
             Destroy(clone);
             Destroy(gameObject);
         }

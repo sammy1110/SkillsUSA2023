@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
 
         if (collision.gameObject.tag == "Player" && enemyBullet)
         {
-            collision.gameObject.SendMessage("hurty", 15);
+            collision.gameObject.SendMessage("HurtPlayer", 15);
         } 
 
         if (collision.gameObject.tag != "Player" &&  !enemyBullet)
