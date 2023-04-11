@@ -963,7 +963,7 @@ GameObject:
   - component: {fileID: 498190486}
   - component: {fileID: 498190490}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -7,6 +7,7 @@ TagManager:
   - Frog
   - Virtual Cam
   - Fruit
+  - Hud
   layers:
   - Default
   - TransparentFX

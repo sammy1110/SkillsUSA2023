@@ -91651,6 +91651,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Maya
       objectReference: {fileID: 0}
+    - target: {fileID: 6800400333496473494, guid: c3cfaa47739e98943838c880eca624aa, type: 3}
+      propertyPath: fruits.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6800400333496473494, guid: c3cfaa47739e98943838c880eca624aa, type: 3}
+      propertyPath: fruits.Array.data[0]
+      value: 
+      objectReference: {fileID: 6790582566519427239, guid: ecc5669c4d687664e98dae6ba0e63c84, type: 3}
+    - target: {fileID: 6800400333496473494, guid: c3cfaa47739e98943838c880eca624aa, type: 3}
+      propertyPath: fruits.Array.data[1]
+      value: 
+      objectReference: {fileID: 7109316336542027449, guid: 20b6d903048114c408681f8d62f2bfff, type: 3}
     - target: {fileID: 6800400333496473495, guid: c3cfaa47739e98943838c880eca624aa, type: 3}
       propertyPath: m_SortingOrder
       value: 2

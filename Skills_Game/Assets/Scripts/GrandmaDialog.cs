@@ -26,7 +26,10 @@ public class GrandmaDialog : MonoBehaviour
         if (speak.index == 2 && !Inventory.hasBook && Character2dController.hasFrog)
         {
             Inventory.hasBook = true;
-            DontDestroyOnLoad(Instantiate(book));
+            GameObject Localbook = Instantiate(book);
+            DontDestroyOnLoad(Localbook);
+            
+            
         }
     }
 }

@@ -45,12 +45,12 @@ public class Character2dController : MonoBehaviour
             hasHud= true;
         }
 
-        if (hasFrog)
+        if (hasFrog && GameObject.FindGameObjectsWithTag("Hud").Length > 1)
         {
-            GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(0).gameObject.SetActive(false);
-            GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(1).gameObject.SetActive(true);
+            Destroy(GameObject.Find("Canvas"));
         }
         sprite = GetComponent<SpriteRenderer>();
+        inventory = FindObjectOfType<Inventory>();
     }
     public void Update()
     { 
@@ -71,7 +71,12 @@ public class Character2dController : MonoBehaviour
 
         if (healthBar == null && hasHud)
         {
-            healthBar = GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(0).GetComponent<Image>();
+            healthBar = GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(2).GetComponent<Image>();
+            if (hasFrog)
+            {
+                healthBar.transform.parent.GetChild(0).gameObject.SetActive(false);
+                healthBar.transform.parent.GetChild(1).gameObject.SetActive(true);
+            }
             DontDestroyOnLoad(healthBar.transform.root);
             Debug.Log(healthBar);      
         }
