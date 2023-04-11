@@ -26,6 +26,7 @@ public class Character2dController : MonoBehaviour
     public Image healthBar;
     public bool canHurt = true;
     public float health = 100;
+    public static Canvas canvas;
 
     string currentLevel;
 
@@ -42,6 +43,12 @@ public class Character2dController : MonoBehaviour
         if (SceneManager.GetActiveScene().name == "Testing")
         {
             hasHud= true;
+        }
+
+        if (hasFrog)
+        {
+            GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(1).gameObject.SetActive(true);
         }
         sprite = GetComponent<SpriteRenderer>();
     }
@@ -211,6 +218,10 @@ public class Character2dController : MonoBehaviour
         canHurt = false;
         StartCoroutine(hurtTick());
         health = Mathf.Clamp(health - hurtAmount, 0, 100);
+        if (health <= 0) 
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     IEnumerator hurtTick()

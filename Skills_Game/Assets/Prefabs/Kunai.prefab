@@ -100,7 +100,7 @@ MonoBehaviour:
   collided:
     serializedVersion: 2
     m_Bits: 1
-  speed: 1
+  speed: 2
   rb2D: {fileID: 266652823542819279}
   lifetime: 3
   enemyBullet: 1
