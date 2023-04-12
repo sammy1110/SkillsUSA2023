@@ -17,12 +17,17 @@ public class AI_Controller : MonoBehaviour
     public Image healthBar;
     CanvasGroup BackGroundFade;
 
+    public AudioClip deathSound;
+    public AudioClip hurtNoise;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         currentpos = patrolingpos[Random.Range(0, patrolingpos.Length)];
         playerScript = player.GetComponent<Character2dController>();
         BackGroundFade = healthBar.transform.parent.GetComponent<CanvasGroup>();
+        audioSource = FindObjectOfType<AudioSource>();
     }
 
     // Update is called once per frame
@@ -70,8 +75,11 @@ public class AI_Controller : MonoBehaviour
     {
         BackGroundFade.alpha = 2;
         health = Mathf.Clamp(health - hurtAmount, 0, 100);
+        audioSource.PlayOneShot(hurtNoise);
+
         if (health <=0)
         {
+            audioSource.PlayOneShot(deathSound);
             Destroy(gameObject);
         }
     }

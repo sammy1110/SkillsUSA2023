@@ -25,6 +25,9 @@ public class Inventory : MonoBehaviour
 
     public static bool hasBook;
 
+    public AudioClip inventoryOpen;
+    AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -35,6 +38,7 @@ public class Inventory : MonoBehaviour
 
         visibility = GetComponent<CanvasGroup>();
         visibility.interactable= false;
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -76,6 +80,7 @@ public class Inventory : MonoBehaviour
                 visibility.interactable = true;
                 isOpen= true;
                 visibility.blocksRaycasts = true;
+                audioSource.PlayOneShot(inventoryOpen);
             }
         }     
     }

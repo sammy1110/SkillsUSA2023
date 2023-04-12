@@ -148,7 +148,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_Sprite: {fileID: 6777552316308194222, guid: 3a8f1e4aaac56e64f8902e0cae50b31e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -180,6 +180,10 @@ MonoBehaviour:
   - {x: -4.5, y: -0.08}
   currentpos: {x: 0, y: 0}
   player: {fileID: 0}
+  health: 100
+  healthBar: {fileID: 0}
+  deathSound: {fileID: 0}
+  hurtNoise: {fileID: 0}
 --- !u!61 &9128837263720154998
 BoxCollider2D:
   m_ObjectHideFlags: 0
