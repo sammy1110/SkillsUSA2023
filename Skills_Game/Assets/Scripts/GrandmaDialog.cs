@@ -6,6 +6,9 @@ public class GrandmaDialog : MonoBehaviour
 {
     Dialog speak;
     public GameObject book;
+    public AudioClip obtainBook;
+
+    AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -18,6 +21,7 @@ public class GrandmaDialog : MonoBehaviour
             speak.dialogue[1] = "Looks like you found the Rare Frog.";
             speak.dialogue[2] = "Adios Mija,also here is this book to help you and good luck again.";
         }
+        audioSource= GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -27,6 +31,7 @@ public class GrandmaDialog : MonoBehaviour
         {
             Inventory.hasBook = true;
             GameObject Localbook = Instantiate(book);
+            audioSource.PlayOneShot(obtainBook);
             DontDestroyOnLoad(Localbook);
             
             
