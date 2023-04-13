@@ -134,6 +134,33 @@ public class Inventory : MonoBehaviour
         }       
     }
 
+    public void removeItem(string item, int amount)
+    {
+        for (int i = 0; i < items.Count; i++)
+        {
+            if (items[i].name == item)
+            {
+                Item itemScript = items[i].GetComponent<Item>();
+                itemScript.amount -= amount;
+                inventoryItems[items.IndexOf(itemScript.gameObject)].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = itemScript.amount.ToString();
+                if (itemScript.amount <= 0)
+                {
+                    inventoryItems[items.IndexOf(itemScript.gameObject)].transform.GetChild(1).gameObject.SetActive(false);
+                    inventoryItems[items.IndexOf(itemScript.gameObject)].transform.GetChild(2).GetComponent<TextMeshProUGUI>().text = null;
+                    items.Remove(itemScript.gameObject);
+                    Debug.Log(itemScript.gameObject.name);
+                    Destroy(itemScript.gameObject);
+                    inventoryCount--;
+                }
+            }
+        }
+
+
+        
+            
+        
+    }
+
     public void HighLightSquare(GameObject square)
     {
         square.SetActive (true);

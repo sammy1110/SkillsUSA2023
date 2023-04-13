@@ -27,6 +27,7 @@ public class Character2dController : MonoBehaviour
     public bool canHurt = true;
     public float health = 100;
     public static Canvas canvas;
+    public GameObject deathScreen;
 
     string currentLevel;
 
@@ -45,9 +46,10 @@ public class Character2dController : MonoBehaviour
             hasHud= true;
         }
 
-        if (hasFrog && GameObject.FindGameObjectsWithTag("Hud").Length > 1)
+        if (GameObject.FindGameObjectsWithTag("Hud").Length > 1)
         {
             Destroy(GameObject.Find("Canvas"));
+            Debug.Log("Destroyed");
         }
         sprite = GetComponent<SpriteRenderer>();
         inventory = FindObjectOfType<Inventory>();
@@ -225,7 +227,12 @@ public class Character2dController : MonoBehaviour
         health = Mathf.Clamp(health - hurtAmount, 0, 100);
         if (health <= 0) 
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            inventory.removeItem("Apple", 10);
+            inventory.removeItem("Cherries",10);
+            Inventory.appleAmmo = 0;
+            Inventory.cherryAmmo = 0;
+            Instantiate(deathScreen);
+            Time.timeScale = 0;
         }
     }
 
