@@ -51,6 +51,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -316,6 +317,16 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      My Stardew Valley farmhouse (2) (1)_3: 2204595600577032160
+      My Stardew Valley farmhouse (2) (1)_2: -4036877110717743248
+      My Stardew Valley farmhouse (2) (1)_6: -852475509237924791
+      My Stardew Valley farmhouse (2) (1)_4: 1406226676421684881
+      My Stardew Valley farmhouse (2) (1)_0: 4936240946805577622
+      My Stardew Valley farmhouse (2) (1)_8: 3238195520054869306
+      My Stardew Valley farmhouse (2) (1)_1: -3029867917601295197
+      My Stardew Valley farmhouse (2) (1)_7: -4825262509449956977
+      My Stardew Valley farmhouse (2) (1)_5: -3943092091787235710
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -63,6 +63,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -412,6 +413,20 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      Maya Sprite Sheet_7: -2995568797546096520
+      Maya Sprite Sheet_11: 2544791269039578273
+      Maya Sprite Sheet_0: -1265392510660971659
+      Maya Sprite Sheet_2: -8289788288420246894
+      Maya Sprite Sheet_6: 3691850159691608189
+      Maya Sprite Sheet_5: 7074207568564507068
+      Maya Sprite Sheet_12: 4403298514089616451
+      Maya Sprite Sheet_1: 345968183715172849
+      Maya Sprite Sheet_10: -4358738881070472121
+      Maya Sprite Sheet_3: 1024494725426900235
+      Maya Sprite Sheet_8: 2238167064712455579
+      Maya Sprite Sheet_4: 5127339522709059926
+      Maya Sprite Sheet_9: -1463279919974645690
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
