@@ -83400,9 +83400,9 @@ MonoBehaviour:
   m_Follow: {fileID: 251601922}
   m_Lens:
     FieldOfView: 60
-    OrthographicSize: 1.9651728
-    NearClipPlane: 0.3
-    FarClipPlane: 1000
+    OrthographicSize: 4
+    NearClipPlane: 0.1
+    FarClipPlane: 5000
     Dutch: 0
     LensShift: {x: 0, y: 0}
   m_Transitions:
@@ -87239,11 +87239,11 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
-  far clip plane: 1000
+  near clip plane: 0.1
+  far clip plane: 5000
   field of view: 60
   orthographic: 1
-  orthographic size: 1.9651728
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -87267,7 +87267,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1440050934}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.42, y: -1.02, z: -10}
+  m_LocalPosition: {x: 5.8658476, y: -1.0237331, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -98039,8 +98039,8 @@ PolygonCollider2D:
       - {x: -23.102943, y: 39.72642}
       - {x: -82.65174, y: 39.268906}
       - {x: -83.47211, y: -25.272928}
-      - {x: 12.277357, y: -25.122255}
-      - {x: 11.889636, y: 38.6988}
+      - {x: 11.430243, y: -25.334036}
+      - {x: 11.276484, y: 38.6988}
 --- !u!4 &1951549800
 Transform:
   m_ObjectHideFlags: 0
