@@ -9,7 +9,7 @@ public class Dialog : MonoBehaviour
     public GameObject dialoguePanel;
     public Text dialogueText;
     public string[] dialogue;
-    private int index;
+    public int index;
 
     public float typingSpeed;
     public bool playerIsClose;

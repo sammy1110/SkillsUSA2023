@@ -9,15 +9,26 @@ public class GrabController : MonoBehaviour
     public float rayDist;
     public LayerMask Fwog;
     public GameObject player;
+    public GameObject healthBar;
 
+    public AudioClip grabFrog;
+    AudioSource audioSource;
+
+    void Start()
+    {
+        audioSource = FindObjectOfType<AudioSource>();
+    }
 
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E) && Vector2.Distance(player.transform.position, transform.position)< 1) 
         {
-            transform.parent = player.transform;
-            transform.localPosition = boxHolder.localPosition;
+            Character2dController.hasFrog= true;
+            audioSource.PlayOneShot(grabFrog);
+            Destroy(gameObject);
+            GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(0).gameObject.SetActive(false);
+            GameObject.Find("Canvas").transform.Find("HealthBackGround").GetChild(1).gameObject.SetActive(true);
         }
     }
 }
