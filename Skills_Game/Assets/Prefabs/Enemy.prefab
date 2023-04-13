@@ -182,8 +182,8 @@ MonoBehaviour:
   player: {fileID: 0}
   health: 100
   healthBar: {fileID: 0}
-  deathSound: {fileID: 0}
-  hurtNoise: {fileID: 0}
+  deathSound: {fileID: 8300000, guid: 8f711cc07af078c4a8ef1182c1615e16, type: 3}
+  hurtNoise: {fileID: 8300000, guid: 1a188c64a6e07dc40849c79c456e2af0, type: 3}
 --- !u!61 &9128837263720154998
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -221,6 +221,7 @@ GameObject:
   - component: {fileID: 4097926543316091256}
   - component: {fileID: 4504088249967183289}
   - component: {fileID: 2183631021096569256}
+  - component: {fileID: 4787551509753467081}
   m_Layer: 5
   m_Name: BackGround
   m_TagString: Untagged
@@ -286,6 +287,18 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!225 &4787551509753467081
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6141264960637476624}
+  m_Enabled: 1
+  m_Alpha: 0
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
+  m_IgnoreParentGroups: 0
 --- !u!1 &7923128788900984873
 GameObject:
   m_ObjectHideFlags: 0

@@ -24,10 +24,12 @@ public class AI_Controller : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         currentpos = patrolingpos[Random.Range(0, patrolingpos.Length)];
         playerScript = player.GetComponent<Character2dController>();
-        BackGroundFade = healthBar.transform.parent.GetComponent<CanvasGroup>();
         audioSource = FindObjectOfType<AudioSource>();
+        healthBar = transform.GetChild(0).GetChild(0).GetChild(0).GetComponent<Image>();
+        BackGroundFade = healthBar.transform.parent.GetComponent<CanvasGroup>();
     }
 
     // Update is called once per frame
